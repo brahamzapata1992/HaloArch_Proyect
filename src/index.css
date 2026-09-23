@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Allura&family=Cormorant+Garamond:wght@400;500;600&family=Montserrat:wght@300;400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: 'Montserrat', Arial, sans-serif;
+  color: #241f21;
+  background: #fffaf7;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+html { scroll-behavior: smooth; }
+body { margin: 0; min-width: 320px; min-height: 100vh; background: #fffaf7; }
+button, input { font: inherit; }
+button, a { -webkit-tap-highlight-color: transparent; }
+
+.arch-mask {
+  border-radius: 999px 999px 10px 10px;
+  overflow: hidden;
+}
+
+.fine-grid {
+  background-image:
+    linear-gradient(to right, rgba(132,90,78,.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(132,90,78,.05) 1px, transparent 1px);
+  background-size: 26px 26px;
+}
+
+.soft-panel {
+  background: rgba(255,255,255,.86);
+  backdrop-filter: blur(14px);
+}
+
+input[type='range'] { cursor: pointer; }
