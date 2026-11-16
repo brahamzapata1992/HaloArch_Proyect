@@ -35,3 +35,33 @@ button, a { -webkit-tap-highlight-color: transparent; }
 }
 
 input[type='range'] { cursor: pointer; }
+input[type='range']:disabled { cursor: not-allowed; }
+
+.halo-range {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 6px;
+  border-radius: 999px;
+  background: linear-gradient(to right, #cf9187 var(--fill, 50%), #ead8d1 var(--fill, 50%));
+  outline: none;
+}
+.halo-range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #fff;
+  border: 2px solid #cf9187;
+  box-shadow: 0 2px 6px rgba(91, 56, 46, .25);
+  transition: transform .15s;
+}
+.halo-range::-webkit-slider-thumb:hover { transform: scale(1.12); }
+.halo-range::-moz-range-thumb {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #fff;
+  border: 2px solid #cf9187;
+  box-shadow: 0 2px 6px rgba(91, 56, 46, .25);
+}
+.halo-range:focus-visible { box-shadow: 0 0 0 3px rgba(207, 145, 135, .35); }
