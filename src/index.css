@@ -22,17 +22,15 @@ button, a { -webkit-tap-highlight-color: transparent; }
   overflow: hidden;
 }
 
-.fine-grid {
-  background-image:
-    linear-gradient(to right, rgba(132,90,78,.05) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(132,90,78,.05) 1px, transparent 1px);
-  background-size: 26px 26px;
+/* Home set: covers slide down over the gold frames, themes crossfade. */
+.cover { transition: box-shadow .5s cubic-bezier(.23, 1, .32, 1); }
+.cover-cloth { transition: clip-path .75s cubic-bezier(.23, 1, .32, 1); }
+.theme-art { transition: opacity .45s cubic-bezier(.23, 1, .32, 1); }
+@media (prefers-reduced-motion: reduce) {
+  .cover, .cover-cloth, .theme-art { transition-duration: .01ms; transition-delay: 0ms !important; }
 }
 
-.soft-panel {
-  background: rgba(255,255,255,.86);
-  backdrop-filter: blur(14px);
-}
+::selection { background: #f2d2cc; color: #241f21; }
 
 input[type='range'] { cursor: pointer; }
 input[type='range']:disabled { cursor: not-allowed; }
